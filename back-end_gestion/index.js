@@ -29,21 +29,21 @@ mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/bd-evalfi
 });
 
 //Routes employees
-app.post('/api/v1/employee', employeeController.createEmployee);
+app.post('/api/v1/employees', employeeController.createEmployee);
 app.get('/api/v1/employees', employeeController.allEmployees);
 app.get('/api/v1/employees/:id', employeeController.oneEmployee);
 app.delete('/api/v1/employees/:id', employeeController.removeEmployee);
 app.put('/api/v1/employees/:id', employeeController.updateEmployee);
 
 //Routes customers
-app.post('/api/v1/customer', customerController.createCustomer);
+app.post('/api/v1/customers', customerController.createCustomer);
 app.get('/api/v1/customers', customerController.allCustomers);
 app.get('/api/v1/customers/:id', customerController.oneCustomer);
 app.delete('/api/v1/customers/:id', customerController.removeCustomer);
 app.put('/api/v1/customers/:id', customerController.updateCustomer);
 
 //Routes projects
-app.post('/api/v1/project', projectController.createProject);
+app.post('/api/v1/projects', projectController.createProject);
 app.get('/api/v1/projects', projectController.allProjects);
 app.get('/api/v1/projects/:id', projectController.oneProject);
 app.delete('/api/v1/projects/:id', projectController.removeProject);
