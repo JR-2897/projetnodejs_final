@@ -42,7 +42,7 @@ exports.allCustomers = (req, res) => {
 }
 
 //Print one customer
-exports.oneEmployee = (req, res) => {
+exports.oneCustomer = (req, res) => {
 	Customer.findById(req.params.id, (err, customer) => {
 		if(err) {
 			console.log(err);

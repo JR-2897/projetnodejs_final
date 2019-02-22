@@ -29,6 +29,12 @@ mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/bd-evalfi
 app.post('/api/v1/employee', employeeController.createEmployee);
 app.get('/api/v1/employees', employeeController.allEmployees);
 app.get('/api/v1/employees/:id', employeeController.oneEmployee);
+app.post('/api/v1/customer', employeeController.createCustomer);
+app.get('/api/v1/customers', employeeController.allCustomers);
+app.get('/api/v1/customers/:id', employeeController.oneCustomer);
+app.post('/api/v1/project', employeeController.createProject);
+app.get('/api/v1/projects', employeeController.allProjects);
+app.get('/api/v1/projects/:id', employeeController.oneProject);
 
 
 app.listen(port, () => {
