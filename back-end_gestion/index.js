@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/evalfinal-employee', (err) => {
+mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/bd-evalfinal', (err) => {
 	if(err) {
 		console.log('Database not found');
 	}
@@ -27,6 +27,8 @@ mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/evalfinal
 });
 
 app.post('/api/v1/employee', employeeController.createEmployee);
+app.get('/api/v1/employees', employeeController.allEmployees);
+app.get('/api/v1/employees/:id', employeeController.oneEmployee);
 
 
 app.listen(port, () => {

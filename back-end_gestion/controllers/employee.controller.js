@@ -1,5 +1,6 @@
 const Employee = require ('../models/employee.model.js');
 
+//Function create employee
 exports.createEmployee = (req, res) => {
 	let employee = new Employee(
 		{
@@ -17,23 +18,34 @@ exports.createEmployee = (req, res) => {
       office: req.body.office
 		}
 	);
-	user.save( (err) => {
+	employee.save( (err) => {
 		if (err) {
 			console.log(err);
 		}
 
 		else {
-			console.log("User created");
+			console.log("Employee created");
 		}
-		res.send(user);
+		res.send(employee);
 	})
 }
 
-exports.allProducts = (req, res) => {
-	Product.find((err, product) => {
+//Print all employees
+exports.allEmployees = (req, res) => {
+	Employee.find((err, employee) => {
 		if(err) {
 			console.log(err);
 		}
-		res.send(product);
+		res.send(employee);
+	})
+}
+
+//Print one employee
+exports.oneEmployee = (req, res) => {
+	Employee.findById(req.params.id, (err, employee) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send(employee);
 	})
 }
