@@ -1,16 +1,16 @@
-const User = require ('../models/user.model.js');
+const Employee = require ('../models/employee.model.js');
 
-exports.createProduct = (req, res) => {
-	let user = new User(
+exports.createEmployee = (req, res) => {
+	let employee = new Employee(
 		{
 			name: req.body.name,
 			first_name: req.body.first_name,
 			username: req.body.username,
 			birth_date: req.body.birth_date,
 			address: {
-		    street: [req.body.street],
-		    city: [req.body.city],
-		    postal_code: [req.body.postal_code],
+		    street: req.body.address.street,
+		    city: req.body.address.city,
+		    postal_code: req.body.address.postal_code,
 		  },
       phone_number: req.body.phone_number,
       email_address: req.body.email_address,
@@ -26,5 +26,14 @@ exports.createProduct = (req, res) => {
 			console.log("User created");
 		}
 		res.send(user);
+	})
+}
+
+exports.allProducts = (req, res) => {
+	Product.find((err, product) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send(product);
 	})
 }

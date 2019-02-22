@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
+const employeeController = require ('./controllers/employee.controller.js');
 
 app.use(function(req, res, next) {
 	res.setHeader('Content-type','application/json');
@@ -16,7 +17,7 @@ app.use(function(req, res, next) {
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds125525.mlab.com:25525/evalfinal-user', (err) => {
+mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds147225.mlab.com:47225/evalfinal-employee', (err) => {
 	if(err) {
 		console.log('Database not found');
 	}
@@ -24,6 +25,9 @@ mongoose.connect('mongodb://admin:a0a0a0a0a0a0@ds125525.mlab.com:25525/evalfinal
 		console.log('Database connected');
 	}
 });
+
+app.post('/api/v1/employee', employeeController.createEmployee);
+
 
 app.listen(port, () => {
 	console.log(`Server on on port ${port}`);
