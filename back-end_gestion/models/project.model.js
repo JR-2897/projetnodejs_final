@@ -5,8 +5,8 @@ let ProjectSchema = new Schema ({
 
   name: String,
   description: String,
-  begin_date: String,
-  end_date: String,
+  begin_date: Date,
+  end_date: Date,
   total_cost: Number,
   status: String
 

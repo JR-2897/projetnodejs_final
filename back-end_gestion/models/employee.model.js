@@ -6,7 +6,7 @@ let EmployeeSchema = new Schema ({
   name: String,
   first_name: String,
   username: String,
-  birth_date: String,
+  birth_date: Date,
   address: {
     street: String,
     city: String,
