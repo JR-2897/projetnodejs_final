@@ -25,11 +25,11 @@
 
       <div class="form-group">
 				<label>Rue</label>
-				<input type="text" v-model="address.street">
+				<input type="text" v-model="street">
         <label>Ville</label>
-				<input type="text" v-model="address.city">
+				<input type="text" v-model="city">
         <label>Code Postal</label>
-				<input type="number" v-model="address.postal_code">
+				<input type="number" v-model="postal_code">
 			</div>
 
       <div class="form-group">
@@ -50,7 +50,7 @@
         <input type="radio" value="Intégrateur" v-model="office"> Intégrateur
 			</div>
 
-			<button type="button" name="button" v-on:click="formData(name, first_name, username, address, phone_number, email_address, office)">Envoyer</button>
+			<button type="button" name="button" v-on:click="formData(name, first_name, username, street, city, postal_code, phone_number, email_address, office)">Envoyer</button>
 		</form>
 	</div>
 </template>
@@ -76,8 +76,8 @@ export default {
 		}
 	},
 	methods: {
-		formData: function (name, first_name, username, address, phone_number, email_address, office) {
-			EmployeesService.createEmployee(name, first_name, username, address, phone_number, email_address, office)
+		formData: function (name, first_name, username, street, city, postal_code, phone_number, email_address, office) {
+			EmployeesService.createEmployee(name, first_name, username, street, city, postal_code, phone_number, email_address, office)
 		}
 	}
 }

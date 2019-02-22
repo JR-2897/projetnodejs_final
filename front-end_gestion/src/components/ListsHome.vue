@@ -11,13 +11,13 @@
           <th>Coût total</th>
           <th>Status</th>
         </tr>
-        <tr v-for="projet in projets">
-          <td>{{projet.name}}</td>
-          <td>{{projet.description}}</td>
-          <td>{{projet.begin_date}}</td>
-          <td>{{projet.end_date}}</td>
-          <td>{{projet.total_cost}}</td>
-          <td>{{projet.status}}</td>
+        <tr v-for="project in projects">
+          <td>{{project.name}}</td>
+          <td>{{project.description}}</td>
+          <td>{{project.begin_date}}</td>
+          <td>{{project.end_date}}</td>
+          <td>{{project.total_cost}}</td>
+          <td>{{project.status}}</td>
         </tr>
       </table>
     </div>
@@ -58,8 +58,7 @@ import ProjectsService from '../services/ProjectsService.vue';
 import EmployeesService from '../services/EmployeesService.vue';
 
 export default {
-  name: 'ListProjects',
-  name: 'ListEmployees',
+  name: 'Home',
   props: {
     msg: String
   },

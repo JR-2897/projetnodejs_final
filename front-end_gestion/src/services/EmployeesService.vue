@@ -8,7 +8,7 @@
 				return response.json();
 			})
 		},
-		createEmployee(name, first_name, username, address, phone_number, email_address, office) {
+		createEmployee(name, first_name, username, street, city, postal_code, phone_number, email_address, office) {
 			fetch(myApiUrl, {
 				method: 'post',
 				headers: {
