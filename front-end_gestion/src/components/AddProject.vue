@@ -31,10 +31,10 @@
       <div class="form-group">
 				<label>Statut</label>
         <br>
-				<input type="radio" v-model="status"> Annulé
-        <input type="radio" v-model="status"> Terminé
-        <input type="radio" v-model="status"> En cours de réalisation
-        <input type="radio" v-model="status"> Prospect
+				<input type="radio" value="Annulé" v-model="status"> Annulé
+        <input type="radio" value="Terminé" v-model="status"> Terminé
+        <input type="radio" value="En cours de réalisation" v-model="status"> En cours de réalisation
+        <input type="radio" value="Prospect" v-model="status"> Prospect
 			</div>
 
 			<button type="button" name="button" v-on:click="formData(name, description, begin_date, end_date, total_cost, status)">Envoyer</button>

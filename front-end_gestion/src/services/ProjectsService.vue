@@ -1,5 +1,5 @@
 <script>
-	const myApiUrl = "http://localhost:3000/api/v1/employees/";
+	const myApiUrl = "http://localhost:3000/api/v1/projects/";
 
 	export default {
 		getProjects () {

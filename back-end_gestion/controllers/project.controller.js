@@ -12,7 +12,7 @@ exports.createProject = (req, res) => {
       status: req.body.status,
 		}
 	);
-	customer.save( (err) => {
+	project.save( (err) => {
 		if (err) {
 			console.log(err);
 		}
@@ -20,7 +20,7 @@ exports.createProject = (req, res) => {
 		else {
 			console.log("Projet créé");
 		}
-		res.send(customer);
+		res.send(project);
 	})
 }
 
