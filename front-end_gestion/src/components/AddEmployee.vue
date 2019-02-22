@@ -2,7 +2,7 @@
 	<div>
 		<h1>Formulaire ajout</h1>
 
-		<form class="create-project">
+		<form class="create-employee">
 			<div class="form-group">
 				<label>Nom</label>
 				<input type="text" v-model="name">
@@ -44,28 +44,28 @@
 
       <div class="form-group">
 				<label>Poste</label>
-				<input type="radio" value="Chef de projet" v-model="status"> Chef de projet
-        <input type="radio" value="Développeur" v-model="status"> Développeur
-        <input type="radio" value="Commercial" v-model="status"> Commercial
-        <input type="radio" value="Intégrateur" v-model="status"> Intégrateur
+				<input type="radio" value="Chef de projet" v-model="office"> Chef de projet
+        <input type="radio" value="Développeur" v-model="office"> Développeur
+        <input type="radio" value="Commercial" v-model="office"> Commercial
+        <input type="radio" value="Intégrateur" v-model="office"> Intégrateur
 			</div>
 
-			<button type="button" name="button" v-on:click="formData(name, first_name, username, address{street, city, postal_code}, phone_number, email_address, office)">Envoyer</button>
+			<button type="button" name="button" v-on:click="formData(name, first_name, username, address, phone_number, email_address, office)">Envoyer</button>
 		</form>
 	</div>
 </template>
 
 <script>
-import ProjectsService from '../services/ProjectsService.vue';
+import EmployeesService from '../services/EmployeesService.vue';
 
 export default {
-	name:'AddProject',
+	name:'AddEmployee',
 	data() {
 		return {
 			name: "",
 			first_name: "",
 			username: "",
-      address {
+      address: {
         street:"",
         city:"",
         postal_code:""
@@ -76,8 +76,8 @@ export default {
 		}
 	},
 	methods: {
-		formData: function (name, first_name, username, address{street, city, postal_code}, phone_number, email_address, office) {
-			ProjectsService.createProject(name, first_name, username, address{street, city, postal_code}, phone_number, email_address, office)
+		formData: function (name, first_name, username, address, phone_number, email_address, office) {
+			EmployeesService.createEmployee(name, first_name, username, address, phone_number, email_address, office)
 		}
 	}
 }

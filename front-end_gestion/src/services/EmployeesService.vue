@@ -1,14 +1,14 @@
 <script>
-	const myApiUrl = "http://localhost:3000/api/v1/projects/";
+	const myApiUrl = "http://localhost:3000/api/v1/employees/";
 
 	export default {
-		getProjects () {
+		getEmployees () {
 			return fetch(myApiUrl)
 			.then ((response) => {
 				return response.json();
 			})
 		},
-		createProject(name, description, begin_date, end_date, total_cost, status) {
+		createEmployee(name, first_name, username, address, phone_number, email_address, office) {
 			fetch(myApiUrl, {
 				method: 'post',
 				headers: {
@@ -17,11 +17,16 @@
 				},
 				body:JSON.stringify({
 					"name":name,
-  				"description":description,
-  				"begin_date":begin_date,
-  				"end_date":end_date,
-          "total_cost":total_cost,
-          "status":status
+  				"first_name":first_name,
+  				"username":username,
+  				"address": {
+            "street":street,
+            "city":city,
+             "postal_code":postal_code
+          },
+          "phone_number":phone_number,
+          "email_address":email_address,
+          "office":office
 				})
 			})
 			.then((response) => {

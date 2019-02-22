@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import AddProjects from './views/AddProjects.vue'
+import AddEmployees from './views/AddEmployees.vue'
 
 Vue.use(Router)
 
@@ -24,8 +25,13 @@ export default new Router({
     },
     {
       path: '/addProjects',
-      name: 'addProject',
+      name: 'addProjects',
       component: AddProjects
+    },
+    {
+      path: '/addEmployees',
+      name: 'addEmployees',
+      component: AddEmployees
     }
   ]
 })
