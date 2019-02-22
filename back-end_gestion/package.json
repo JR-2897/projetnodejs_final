@@ -1,0 +1,26 @@
+{
+  "name": "back-end_gestion",
+  "version": "1.0.0",
+  "description": "partie back du projet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JR-2897/projetnodejs_final.git"
+  },
+  "author": "JR-2897",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JR-2897/projetnodejs_final.git/issues"
+  },
+  "homepage": "https://github.com/JR-2897/projetnodejs_final.git#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.14",
+    "nodemon": "^1.18.10"
+  }
+}
