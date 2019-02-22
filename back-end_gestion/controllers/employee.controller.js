@@ -24,7 +24,7 @@ exports.createEmployee = (req, res) => {
 		}
 
 		else {
-			console.log("Employee created");
+			console.log("Salarié créé");
 		}
 		res.send(employee);
 	})
@@ -47,5 +47,25 @@ exports.oneEmployee = (req, res) => {
 			console.log(err);
 		}
 		res.send(employee);
+	})
+}
+
+//Remove one employee
+exports.removeEmployee = (req, res) => {
+	Employee.findByIdAndRemove(req.params.id, (err, employee) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Salarié supprimé");
+	})
+}
+
+//Update one employee
+exports.updateEmployee = (req, res) => {
+	Employee.findByIdAndUpdate(req.params.id, req.body, (err, employee) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Salarié modifié");
 	})
 }

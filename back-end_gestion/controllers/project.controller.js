@@ -18,7 +18,7 @@ exports.createProject = (req, res) => {
 		}
 
 		else {
-			console.log("Customer created");
+			console.log("Projet créé");
 		}
 		res.send(customer);
 	})
@@ -26,7 +26,7 @@ exports.createProject = (req, res) => {
 
 //Print all project
 exports.allProjects = (req, res) => {
-	Customer.find((err, project) => {
+	Project.find((err, project) => {
 		if(err) {
 			console.log(err);
 		}
@@ -36,10 +36,30 @@ exports.allProjects = (req, res) => {
 
 //Print one project
 exports.oneProject = (req, res) => {
-	Customer.findById(req.params.id, (err, project) => {
+	Project.findById(req.params.id, (err, project) => {
 		if(err) {
 			console.log(err);
 		}
 		res.send(project);
+	})
+}
+
+//Remove one project
+exports.removeProject = (req, res) => {
+	Project.findByIdAndRemove(req.params.id, (err, project) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Projet supprimé");
+	})
+}
+
+//Update one project
+exports.updateProject = (req, res) => {
+	Project.findByIdAndUpdate(req.params.id, req.body, (err, project) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Produit modifié");
 	})
 }

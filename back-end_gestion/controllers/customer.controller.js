@@ -25,7 +25,7 @@ exports.createCustomer = (req, res) => {
 		}
 
 		else {
-			console.log("Customer created");
+			console.log("Client créé");
 		}
 		res.send(customer);
 	})
@@ -48,5 +48,25 @@ exports.oneCustomer = (req, res) => {
 			console.log(err);
 		}
 		res.send(customer);
+	})
+}
+
+//Remove one project
+exports.removeCustomer = (req, res) => {
+	Customer.findByIdAndRemove(req.params.id, (err, customer) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Client supprimé");
+	})
+}
+
+//Update one customer
+exports.updateCustomer = (req, res) => {
+	Customer.findByIdAndUpdate(req.params.id, req.body, (err, customer) => {
+		if(err) {
+			console.log(err);
+		}
+		res.send("Client modifié");
 	})
 }
