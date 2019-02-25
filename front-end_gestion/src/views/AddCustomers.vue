@@ -1,19 +1,19 @@
 <template>
 	<div>
   	<div class="formulaire">
-    		<AddEmployee/>
+    		<AddCustomer/>
  		</div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import AddEmployee from '@/components/AddEmployee.vue'
+import AddCustomer from '@/components/AddCustomer.vue'
 
 export default {
   name: 'formulaire',
   components: {
-    AddEmployee
+    AddCustomer
   }
 }
 </script>

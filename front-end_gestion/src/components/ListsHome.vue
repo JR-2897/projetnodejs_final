@@ -48,7 +48,26 @@
       </table>
     </div>
     <div>
-      <a href="/AddEmployees">Ajouter un salarié</a>
+      <a href="/AddCustomers">Ajouter un client</a>
+    </div>
+    <div class="customers-list">
+      <table>
+        <tr>
+          <th>Nom de l'entreprise</th>
+          <th>Adresse</th>
+          <th>Contact référent</th>
+          <th>Secteur d'activité</th>
+        </tr>
+        <tr v-for="customer in customers">
+          <td>{{customer.company}}</td>
+          <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
+          <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
+          <td>{{customer.business_line}}</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <a href="/AddCustomers">Ajouter un client</a>
     </div>
   </div>
 </template>
@@ -56,6 +75,7 @@
 <script>
 import ProjectsService from '../services/ProjectsService.vue';
 import EmployeesService from '../services/EmployeesService.vue';
+import CustomersService from '../services/CustomersService.vue';
 
 export default {
   name: 'Home',
@@ -65,15 +85,18 @@ export default {
   data() {
     return {
       projects:[],
-      employees:[]
+      employees:[],
+      customers:[]
     }
   },
-  created(projects, employees) {
+  created(projects, employees, customers) {
     ProjectsService.getProjects()
     EmployeesService.getEmployees()
+    CustomersService.getCustomers()
     .then((data) => {
       this.projects = data;
       this.employees = data;
+      this.customers = data;
     })
     .catch(error => {console.log(error)});
   }
