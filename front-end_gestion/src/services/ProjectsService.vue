@@ -64,7 +64,7 @@
 				return response.json();
 			})
 		},
-		getProduct(id) {
+		getProject(id) {
 			return fetch(myApiUrl + id)
 			.then((response) => {
                 return response.json();

@@ -5,19 +5,11 @@
       <table>
         <tr>
           <th>Nom</th>
-          <th>Description</th>
-          <th>Date de début</th>
-          <th>Date de fin</th>
-          <th>Coût total</th>
-          <th>Status</th>
+          <th>Détails</th>
         </tr>
         <tr v-for="project in projects">
           <td>{{project.name}}</td>
-          <td>{{project.description}}</td>
-          <td>{{project.begin_date}}</td>
-          <td>{{project.end_date}}</td>
-          <td>{{project.total_cost}}</td>
-          <td>{{project.status}}</td>
+          <td><a href="/ViewProject">Voir les détails du projet</a></td>
         </tr>
       </table>
     </div>
@@ -35,6 +27,7 @@
           <th>Téléphone</th>
           <th>Adresse mail</th>
           <th>Poste</th>
+          <th>Détails</th>
         </tr>
         <tr v-for="employee in employees">
           <td>{{employee.name}}</td>
@@ -44,6 +37,7 @@
           <td>{{employe.phone_number}}</td>
           <td>{{employee.email_address}}</td>
           <td>{{employee.office}}</td>
+          <td><a href="/ViewEmployee">Voir les détails du salarié</a></td>
         </tr>
       </table>
     </div>
@@ -57,12 +51,14 @@
           <th>Adresse</th>
           <th>Contact référent</th>
           <th>Secteur d'activité</th>
+          <th>Détails</th>
         </tr>
         <tr v-for="customer in customers">
           <td>{{customer.company}}</td>
           <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
           <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
           <td>{{customer.business_line}}</td>
+          <td><a href="/ViewCustomer">Voir les détails du client</a></td>
         </tr>
       </table>
     </div>

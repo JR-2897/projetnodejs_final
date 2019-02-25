@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import AddProjects from './views/AddProjects.vue'
 import AddEmployees from './views/AddEmployees.vue'
 import AddCustomers from './views/AddCustomers.vue'
+import ViewCustomer from './views/ViewCustomer.vue'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/addCustomers',
       name: 'addCustomers',
       component: AddCustomers
+    },
+    {
+      path: '/ViewCustomer',
+      name: 'ViewCustomer',
+      component: ViewCustomer
     }
   ]
 })

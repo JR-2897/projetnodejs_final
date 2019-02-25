@@ -69,7 +69,7 @@
 				return response.json();
 			})
 		},
-		getProduct(id) {
+		getEmployee(id) {
 			return fetch(myApiUrl + id)
 			.then((response) => {
                 return response.json();

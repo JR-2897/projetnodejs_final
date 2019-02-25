@@ -23,9 +23,9 @@
         <label>Prénom</label>
 				<input type="text" v-model="first_name">
         <label>Téléphone</label>
-				<input type="number" v-model="phone_number">
+				<input type="text" v-model="phone_number">
         <label>Mail</label>
-				<input type="number" v-model="email_address">
+				<input type="text" v-model="email_address">
 			</div>
 
 			<div class="form-group">
