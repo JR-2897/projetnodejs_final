@@ -1,23 +1,20 @@
 <template>
   <div>
-    <div class="customer-details">
+    <div class="customers-list">
       <table>
         <tr>
-          <th>Nom</th>
-          <th>Description</th>
-          <th>Date de début</th>
-          <th>Date de fin</th>
-          <th>Coût total</th>
-          <th>Status</th>
-          <th>Détails</th>
+          <th>Nom de l'entreprise</th>
+          <th>Adresse</th>
+          <th>Contact référent</th>
+          <th>Secteur d'activité</th>
+          <th>Modification</th>
+          <th>Suppression</th>
         </tr>
-        <tr>
-          <td>{{project.name}}</td>
-          <td>{{project.description}}</td>
-          <td>{{project.begin_date}}</td>
-          <td>{{project.end_date}}</td>
-          <td>{{project.total_cost}}</td>
-          <td>{{project.status}}</td>
+        <tr v-for="customer in customers">
+          <td>{{customer.company}}</td>
+          <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
+          <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
+          <td>{{customer.business_line}}</td>
         </tr>
       </table>
     </div>
@@ -46,3 +43,10 @@ export default {
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  table {
+    width: 100%;
+  }
+</style>

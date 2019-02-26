@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="details">
-      <ViewDetailsCustomer/>
+      <ViewDetailsProject/>
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ViewDetailsCustomer from '@/components/ViewDetailsCustomer.vue'
+import ViewDetailsProject from '@/components/ViewDetailsProject.vue'
 
 export default {
   name: 'details',
   components: {
-    ViewDetailsCustomer
+    ViewDetailsProject
   }
 }
 </script>

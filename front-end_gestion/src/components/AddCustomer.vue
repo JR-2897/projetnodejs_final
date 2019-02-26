@@ -33,7 +33,7 @@
 				<input type="text" v-model="business_line">
 			</div>
 
-			<button type="button" name="button" v-on:click="formData(company, street, city, postal_code, name, first-name, phone_number, email_address, business_line)">Envoyer</button>
+			<button type="button" name="button" v-on:click="formData(company, street, city, postal_code, name, first_name, phone_number, email_address, business_line)">Envoyer</button>
 		</form>
 	</div>
 </template>

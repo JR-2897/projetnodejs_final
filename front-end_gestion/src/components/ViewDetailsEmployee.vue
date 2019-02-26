@@ -11,6 +11,8 @@
           <th>Téléphone</th>
           <th>Adresse mail</th>
           <th>Poste</th>
+          <th>Modification</th>
+          <th>Suppression</th>
         </tr>
         <tr>
           <td>{{employee.name}}</td>
@@ -23,6 +25,7 @@
         </tr>
       </table>
     </div>
+  </div>
 </template>
 
 <script>
@@ -47,3 +50,10 @@ export default {
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  table {
+    width: 100%;
+  }
+</style>

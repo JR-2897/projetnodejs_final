@@ -20,23 +20,10 @@
       <table>
         <tr>
           <th>Nom</th>
-          <th>Prenom</th>
-          <th>Username</th>
-          <th>Date de naissance</th>
-          <th>Adresse</th>
-          <th>Téléphone</th>
-          <th>Adresse mail</th>
-          <th>Poste</th>
           <th>Détails</th>
         </tr>
         <tr v-for="employee in employees">
           <td>{{employee.name}}</td>
-          <td>{{employee.first_name}}</td>
-          <td>{{employee.birth_date}}</td>
-          <td>{{employee.address.street + employee.address.postal_code + employee.address.city}}</td>
-          <td>{{employe.phone_number}}</td>
-          <td>{{employee.email_address}}</td>
-          <td>{{employee.office}}</td>
           <td><a href="/ViewEmployee">Voir les détails du salarié</a></td>
         </tr>
       </table>
@@ -48,16 +35,10 @@
       <table>
         <tr>
           <th>Nom de l'entreprise</th>
-          <th>Adresse</th>
-          <th>Contact référent</th>
-          <th>Secteur d'activité</th>
           <th>Détails</th>
         </tr>
         <tr v-for="customer in customers">
           <td>{{customer.company}}</td>
-          <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
-          <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
-          <td>{{customer.business_line}}</td>
           <td><a href="/ViewCustomer">Voir les détails du client</a></td>
         </tr>
       </table>
@@ -87,11 +68,15 @@ export default {
   },
   created(projects, employees, customers) {
     ProjectsService.getProjects()
-    EmployeesService.getEmployees()
-    CustomersService.getCustomers()
     .then((data) => {
       this.projects = data;
+    })
+    EmployeesService.getEmployees()
+    .then((data) => {
       this.employees = data;
+    })
+    CustomersService.getCustomers()
+    .then((data) => {
       this.customers = data;
     })
     .catch(error => {console.log(error)});
