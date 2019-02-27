@@ -48,12 +48,12 @@ export default new Router({
       component: ViewCustomer
     },
     {
-      path: '/ViewProject',
+      path: '/ViewProject/:id',
       name: 'ViewProject',
       component: ViewProject
     },
     {
-      path: '/ViewEmployee',
+      path: '/ViewEmployee/:id',
       name: 'ViewEmployee',
       component: ViewEmployee
     }

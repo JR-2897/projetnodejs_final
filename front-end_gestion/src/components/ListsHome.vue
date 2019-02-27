@@ -9,7 +9,7 @@
         </tr>
         <tr v-for="project in projects">
           <td>{{project.name}}</td>
-          <td><a href="/ViewProject">Voir les détails du projet</a></td>
+          <td><router-link :to="{ name: 'ViewProject', params: { id: project._id}}">Voir les détails du projet</router-link></td>
         </tr>
       </table>
     </div>
@@ -24,7 +24,7 @@
         </tr>
         <tr v-for="employee in employees">
           <td>{{employee.name}}</td>
-          <td><a href="/ViewEmployee">Voir les détails du salarié</a></td>
+          <td><router-link :to="{ name: 'ViewEmployee', params: { id: employee._id}}">Voir les détails du salarié</router-link></td>
         </tr>
       </table>
     </div>
@@ -39,7 +39,7 @@
         </tr>
         <tr v-for="customer in customers">
           <td>{{customer.company}}</td>
-          <td><a href="/ViewCustomer/5c73edb82ac8168ba87dc18a">Voir les détails du client</a></td>
+          <td><router-link :to="{ name: 'ViewCustomer', params: { id: customer._id}}">Voir les détails du client</router-link></td>
         </tr>
       </table>
     </div>
@@ -50,36 +50,36 @@
 </template>
 
 <script>
-import ProjectsService from '../services/ProjectsService.vue';
-import EmployeesService from '../services/EmployeesService.vue';
-import CustomersService from '../services/CustomersService.vue';
+import ProjectsService from '../services/ProjectsService.vue'
+import EmployeesService from '../services/EmployeesService.vue'
+import CustomersService from '../services/CustomersService.vue'
 
 export default {
   name: 'Home',
   props: {
     msg: String
   },
-  data() {
+  data () {
     return {
-      projects:[],
-      employees:[],
-      customers:[]
+      projects: [],
+      employees: [],
+      customers: []
     }
   },
-  created(projects, employees, customers) {
+  created (projects, employees, customers) {
     ProjectsService.getProjects()
     .then((data) => {
-      this.projects = data;
+      this.projects = data
     })
     EmployeesService.getEmployees()
     .then((data) => {
-      this.employees = data;
+      this.employees = data
     })
     CustomersService.getCustomers()
     .then((data) => {
-      this.customers = data;
+      this.customers = data
     })
-    .catch(error => {console.log(error)});
+    .catch(error => { console.log(error) })
   }
 }
 </script>

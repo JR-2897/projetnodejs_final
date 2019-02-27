@@ -42,6 +42,7 @@ export default {
     }
   },
   created(employee) {
+    let id = this.$route.params.id
     EmployeesService.getEmployee(id)
     .then((data) => {
       this.employee = data;

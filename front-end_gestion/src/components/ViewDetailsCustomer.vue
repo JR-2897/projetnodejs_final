@@ -22,19 +22,19 @@
 </template>
 
 <script>
-import CustomersService from '../services/CustomersService.vue';
+import CustomersService from '../services/CustomersService.vue'
 
 export default {
   name: 'Home',
   props: {
     msg: String
   },
-  data() {
+  data () {
     return {
-      customer:[]
+      customer: []
     }
   },
-  created(customer) {
+  created (customer) {
     let id = this.$route.params.id
     console.log(id)
     CustomersService.getCustomer(id)

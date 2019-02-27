@@ -39,6 +39,7 @@ export default {
     }
   },
   created(project) {
+    let id = this.$route.params.id
     ProjectsService.getProject(id)
     .then((data) => {
       this.project = data;

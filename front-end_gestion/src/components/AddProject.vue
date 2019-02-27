@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import ProjectsService from '../services/ProjectsService.vue';
+import ProjectsService from '../services/ProjectsService.vue'
 
 export default {
 	name:'AddProject',
@@ -53,8 +53,8 @@ export default {
 			description: "",
 			begin_date: "",
 			end_date:"",
-      total_cost:"",
-      status:""
+    	total_cost:"",
+    	status:""
 		}
 	},
 	methods: {

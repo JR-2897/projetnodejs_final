@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import CustomersService from '../services/CustomersService.vue';
+import CustomersService from '../services/CustomersService.vue'
 
 export default {
 	name:'AddCustomer',
