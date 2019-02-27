@@ -43,7 +43,7 @@ export default new Router({
       component: AddCustomers
     },
     {
-      path: '/ViewCustomer',
+      path: '/ViewCustomer/:id',
       name: 'ViewCustomer',
       component: ViewCustomer
     },

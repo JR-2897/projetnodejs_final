@@ -27,6 +27,12 @@
 			.then((response) => {
 				return response.json();
 			})
+		},
+		getProject(id) {
+			return fetch(myApiUrl + id)
+			.then((response) => {
+                return response.json();
+            })
 		}
 		/*deleteProjects(id) {
 			fetch(myApiUrl + id, {
@@ -63,13 +69,8 @@
 			.then((response) => {
 				return response.json();
 			})
-		},
-		getProject(id) {
-			return fetch(myApiUrl + id)
-			.then((response) => {
-                return response.json();
-            })
-		}*/
+		},*/
+
 
 	}
 </script>

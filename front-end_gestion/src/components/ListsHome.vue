@@ -39,7 +39,7 @@
         </tr>
         <tr v-for="customer in customers">
           <td>{{customer.company}}</td>
-          <td><a href="/ViewCustomer">Voir les détails du client</a></td>
+          <td><a href="/ViewCustomer/5c73edb82ac8168ba87dc18a">Voir les détails du client</a></td>
         </tr>
       </table>
     </div>

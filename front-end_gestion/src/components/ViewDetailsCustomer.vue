@@ -10,7 +10,7 @@
           <th>Modification</th>
           <th>Suppression</th>
         </tr>
-        <tr v-for="customer in customers">
+        <tr>
           <td>{{customer.company}}</td>
           <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
           <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
@@ -35,6 +35,8 @@ export default {
     }
   },
   created(customer) {
+    let id = this.$route.params.id
+    console.log(id)
     CustomersService.getCustomer(id)
     .then((data) => {
       this.customer = data;
