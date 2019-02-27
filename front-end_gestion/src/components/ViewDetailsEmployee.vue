@@ -24,6 +24,7 @@
           <td>{{employee.email_address}}</td>
           <td>{{employee.office}}</td>
           <td><router-link :to="{ name: 'UpdateEmployee', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
+          <td><router-link :to="{ name: 'DeleteEmployee', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
         </tr>
       </table>
     </div>

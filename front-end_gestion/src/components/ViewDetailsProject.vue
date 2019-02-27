@@ -20,6 +20,7 @@
           <td>{{project.total_cost}}</td>
           <td>{{project.status}}</td>
           <td><router-link :to="{ name: 'UpdateProject', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
+          <td><router-link :to="{ name: 'DeleteProject', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
         </tr>
       </table>
     </div>
