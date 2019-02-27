@@ -17,11 +17,13 @@
         <tr>
           <td>{{employee.name}}</td>
           <td>{{employee.first_name}}</td>
+          <td>{{employee.username}}</td>
           <td>{{employee.birth_date}}</td>
-          <td>{{employee.address.street + employee.address.postal_code + employee.address.city}}</td>
-          <td>{{employe.phone_number}}</td>
+          <td>{{employee.address.street + ' ' + employee.address.postal_code + ' ' + employee.address.city}}</td>
+          <td>{{employee.phone_number}}</td>
           <td>{{employee.email_address}}</td>
           <td>{{employee.office}}</td>
+          <td><router-link :to="{ name: 'UpdateEmployee', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
         </tr>
       </table>
     </div>

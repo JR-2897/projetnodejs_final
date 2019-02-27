@@ -50,7 +50,7 @@
         <input type="radio" value="Intégrateur" v-model="office"> Intégrateur
       </div>
 
-      <button type="button" name="button" v-on:click="formData(name, first_name, username, street, city, postal_code, phone_number, email_address, office)">Envoyer</button>
+      <button type="button" name="button" v-on:click="formData(name, first_name, username, birth_date, street, city, postal_code, phone_number, email_address, office)">Envoyer</button>
     </form>
   </div>
 </template>

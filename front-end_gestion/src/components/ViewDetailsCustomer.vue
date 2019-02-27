@@ -12,9 +12,10 @@
         </tr>
         <tr>
           <td>{{customer.company}}</td>
-          <td>{{customer.address.street + customer.address.postal_code + customer.address.city}}</td>
-          <td>{{customer.contact.name + customer.contact.first_name + customer.contact.phone_number + customer.contact.email_address}}</td>
+          <td>{{customer.address.street + ' ' + customer.address.postal_code + ' ' + customer.address.city}}</td>
+          <td>{{customer.contact.name + ' ' + customer.contact.first_name + ' ' + customer.contact.phone_number + ' ' + customer.contact.email_address}}</td>
           <td>{{customer.business_line}}</td>
+          <td><router-link :to="{ name: 'UpdateCustomer', params: { id: this.$route.params.id}}"><input type="button"></router-link></td>
         </tr>
       </table>
     </div>

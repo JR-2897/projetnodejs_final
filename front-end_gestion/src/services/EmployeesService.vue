@@ -8,7 +8,7 @@ export default {
 			return response.json();
 		})
 	},
-	createEmployee(name, first_name, username, street, city, postal_code, phone_number, email_address, office) {
+	createEmployee(name, first_name, username, birth_date ,street, city, postal_code, phone_number, email_address, office) {
 		fetch(myApiUrl, {
 			method: 'post',
 			headers: {
@@ -19,10 +19,11 @@ export default {
 				"name":name,
 				"first_name":first_name,
 				"username":username,
+				"birth_date":birth_date,
 				"address": {
           "street":street,
           "city":city,
-           "postal_code":postal_code
+          "postal_code":postal_code
         },
         "phone_number":phone_number,
         "email_address":email_address,

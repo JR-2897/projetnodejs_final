@@ -29,7 +29,7 @@
       </table>
     </div>
     <div>
-      <a href="/AddCustomers">Ajouter un client</a>
+      <a href="/AddEmployees">Ajouter un salarié</a>
     </div>
     <div class="customers-list">
       <table>

@@ -7,6 +7,9 @@ import AddCustomers from './views/AddCustomers.vue'
 import ViewCustomer from './views/ViewCustomer.vue'
 import ViewProject from './views/ViewProject.vue'
 import ViewEmployee from './views/ViewEmployee.vue'
+import UpdateEmployee from './views/UpdateEmployee.vue'
+import UpdateCustomer from './views/UpdateCustomer.vue'
+import UpdateProject from './views/UpdateProject.vue'
 
 Vue.use(Router)
 
@@ -56,6 +59,21 @@ export default new Router({
       path: '/ViewEmployee/:id',
       name: 'ViewEmployee',
       component: ViewEmployee
+    },
+    {
+      path: '/UpdateEmployee/:id',
+      name: 'UpdateEmployee',
+      component: UpdateEmployee
+    },
+    {
+      path: '/UpdateCustomer/:id',
+      name: 'UpdateCustomer',
+      component: UpdateCustomer
+    },
+    {
+      path: '/UpdateProject/:id',
+      name: 'UpdateProject',
+      component: UpdateProject
     }
   ]
 })
