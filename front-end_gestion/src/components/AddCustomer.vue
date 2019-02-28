@@ -45,19 +45,19 @@ export default {
 	name:'AddCustomer',
 	data() {
 		return {
-			company: "",
+			company: '',
       address: {
-        street:"",
-        city:"",
-        postal_code:""
+        street: '',
+        city: '',
+        postal_code: ''
       },
       contact: {
-        name:"",
-        first_name:"",
-        phone_number:"",
-        email_address:""
+        name: '',
+        first_name: '',
+        phone_number: '',
+        email_address: ''
       },
-      business_line:""
+      business_line: ''
 		}
 	},
 	methods: {

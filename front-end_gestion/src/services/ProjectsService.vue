@@ -33,6 +33,34 @@ export default {
 		.then((response) => {
       return response.json();
     })
+	},
+	deleteProject(id) {
+		return fetch(myApiUrl + id, {
+			method: "delete"
+		})
+		.then((response) => {
+			return response.json();
+		})
+	},
+	updateProject(id, name, description, begin_date, end_date, total_cost, status) {
+		fetch(myApiUrl + id, {
+			method: 'put',
+			headers: {
+				'Accept':'application/json',
+				'Content-Type':'application/json'
+			},
+			body:JSON.stringify({
+				"name":name,
+				"description":description,
+				"begin_date":begin_date,
+				"end_date":end_date,
+        "total_cost":total_cost,
+        "status":status
+			})
+		})
+		.then((response) => {
+			return response.json();
+		})
 	}
 }
 </script>

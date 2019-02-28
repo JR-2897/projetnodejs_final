@@ -46,19 +46,23 @@ export default {
   props: {
     msg: String
   },
-  data() {
-    return {
-      customer:[]
-    }
-  },
-  created(customer) {
-    let id = this.$route.params.id
-    CustomersService.getCustomer(id)
-    .then((data) => {
-      this.customer = data;
-    })
-    .catch(error => {console.log(error)});
-  },
+	data() {
+		return {
+			company: '',
+      address: {
+        street: '',
+        city: '',
+        postal_code: ''
+      },
+      contact: {
+        name: '',
+        first_name: '',
+        phone_number: '',
+        email_address: ''
+      },
+      business_line: ''
+		}
+	},
   methods: {
 		formData: function (company, street, city, postal_code, name, first_name, phone_number, email_address, business_line) {
       let id = this.$route.params.id

@@ -39,6 +39,14 @@ export default {
 		.then((response) => {
     	return response.json();
     })
+	},
+	deleteCustomer(id) {
+		return fetch(myApiUrl + id, {
+			method: "delete"
+		})
+		.then((response) => {
+			return response.json();
+		})
 	}
 }
 </script>

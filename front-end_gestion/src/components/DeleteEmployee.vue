@@ -11,19 +11,11 @@ export default {
   props: {
     msg: String
   },
-  data() {
-    return {
-      employee:[]
-    }
-  },
-  /*created(employee) {
+  created() {
     let id = this.$route.params.id
-    EmployeesService.getEmployee(id)
-    .then((data) => {
-      this.employee = data;
-    })
+    EmployeesService.deleteEmployee(id)
     .catch(error => {console.log(error)});
-  }*/
+  }
 }
 </script>
 

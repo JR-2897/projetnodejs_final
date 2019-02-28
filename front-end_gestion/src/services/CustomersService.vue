@@ -66,8 +66,8 @@ export default {
 				"contact": {
           "name":name,
 					"first_name":first_name,
-	         "phone_number":phone_number,
-	         "email_address":email_address,
+	        "phone_number":phone_number,
+	        "email_address":email_address,
         },
         "business_line":business_line
 			})
