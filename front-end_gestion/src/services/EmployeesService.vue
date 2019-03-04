@@ -10,10 +10,10 @@ export default {
 	},
 	createEmployee(name, first_name, username, birth_date ,street, city, postal_code, phone_number, email_address, office) {
 		fetch(myApiUrl, {
-			method: 'post',
+			method: "post",
 			headers: {
-				'Accept':'application/json',
-				'Content-Type':'application/json'
+				"Accept":"application/json",
+				"Content-Type":"application/json"
 			},
 			body:JSON.stringify({
 				"name":name,
@@ -40,12 +40,38 @@ export default {
     	return response.json();
     })
 	},
-	deleteCustomer(id) {
+	deleteEmployee(id) {
 		return fetch(myApiUrl + id, {
 			method: "delete"
 		})
 		.then((response) => {
 			return response.json();
+		})
+	},
+	updateEmployee(id, name, first_name, username, birth_date, street, city, postal_code, phone_number, email_address, office) {
+		fetch(myApiUrl + id, {
+			method: "put",
+			headers: {
+				"Accept":"application/json",
+				"Content-Type":"application/json"
+			},
+			body:JSON.stringify({
+				"name":name,
+				"first_name":first_name,
+				"username":username,
+				"birth_date":birth_date,
+				"address":{
+          "street":street,
+          "city":city,
+          "postal_code":postal_code
+        },
+        "phone_number":phone_number,
+				"email_address":email_address,
+				"office":office
+			})
+		})
+		.then((response) => {
+			return response.json().then((data) => console.log(data))
 		})
 	}
 }

@@ -10,22 +10,22 @@
 
       <div class="form-group">
 				<label>Rue</label>
-				<input type="text" v-model="street">
+				<input type="text" v-model="address.street">
         <label>Ville</label>
-				<input type="text" v-model="city">
+				<input type="text" v-model="address.city">
         <label>Code Postal</label>
-				<input type="number" v-model="postal_code">
+				<input type="number" v-model="address.postal_code">
 			</div>
 
       <div class="form-group">
 				<label>Nom</label>
-				<input type="text" v-model="name">
+				<input type="text" v-model="contact.name">
         <label>Prénom</label>
-				<input type="text" v-model="first_name">
+				<input type="text" v-model="contact.first_name">
         <label>Téléphone</label>
-				<input type="text" v-model="phone_number">
+				<input type="text" v-model="contact.phone_number">
         <label>Mail</label>
-				<input type="text" v-model="email_address">
+				<input type="text" v-model="contact.email_address">
 			</div>
 
 			<div class="form-group">
@@ -33,7 +33,7 @@
 				<input type="text" v-model="business_line">
 			</div>
 
-			<button type="button" name="button" v-on:click="formData(company, street, city, postal_code, name, first_name, phone_number, email_address, business_line)">Envoyer</button>
+			<button type="button" name="button" v-on:click="formData(company, address.street, address.city, address.postal_code, contact.name, contact.first_name, contact.phone_number, contact.email_address, business_line)">Envoyer</button>
 		</form>
 	</div>
 </template>
@@ -71,10 +71,3 @@ export default {
 	}
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  table {
-    width: 100%;
-  }
-</style>

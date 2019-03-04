@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="customer-details">
+    <h1>Projet {{project.name}}</h1>
+    <div class="project-details">
       <table class="table">
         <tr>
           <th>Nom</th>
@@ -50,10 +51,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  table {
-    width: 100%;
-  }
-</style>
