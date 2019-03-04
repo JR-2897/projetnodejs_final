@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="customer-details">
-      <table>
+      <table class="table">
         <tr>
           <th>Nom</th>
           <th>Description</th>

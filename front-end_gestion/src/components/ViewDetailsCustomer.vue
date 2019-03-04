@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="customers-list">
-      <table>
+      <table class="table">
         <tr>
           <th>Nom de l'entreprise</th>
           <th>Adresse</th>

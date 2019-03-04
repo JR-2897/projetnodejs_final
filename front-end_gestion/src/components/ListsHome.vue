@@ -2,12 +2,12 @@
   <div>
     <h1>{{ msg }}</h1>
     <div>
-      <table>
+      <table class="table">
         <tr>
           <th>Nombre de Projets</th>
         </tr>
         <tr>
-          <td>{{projects.lenght}}</td>
+          <td>{{projects.length}}</td>
         </tr>
       </table>
     </div>
@@ -15,12 +15,12 @@
       <a href="/ListProjects">Liste des projets</a>
     </div>
     <div>
-      <table>
+      <table class="table">
         <tr>
           <th>Nombre de Clients</th>
         </tr>
         <tr>
-          <td>{{customers.lenght}}</td>
+          <td>{{customers.length}}</td>
         </tr>
       </table>
     </div>
@@ -28,12 +28,12 @@
       <a href="/ListCustomers">Liste des clients</a>
     </div>
     <div>
-      <table>
+      <table class="table">
         <tr>
           <th>Nombre de salariés</th>
         </tr>
         <tr>
-          <td>{{employees.lenght}}</td>
+          <td>{{employees.length}}</td>
         </tr>
       </table>
     </div>
@@ -77,10 +77,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-  table {
-    width: 100%;
-  }
-</style>

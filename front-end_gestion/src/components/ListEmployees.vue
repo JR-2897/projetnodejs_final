@@ -2,7 +2,7 @@
   <div>
     <h1>Liste des salariés</h1>
     <div class="employees-list">
-      <table>
+      <table class="table">
         <tr>
           <th>Nom</th>
           <th>Détails</th>

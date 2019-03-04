@@ -2,7 +2,7 @@
   <div>
     <h1>Liste des clients</h1>
     <div class="customers-list">
-      <table>
+      <table class="table">
         <tr>
           <th>Nom de l'entreprise</th>
           <th>Détails</th>

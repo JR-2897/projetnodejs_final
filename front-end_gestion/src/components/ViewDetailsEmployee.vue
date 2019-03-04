@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="employee-customer">
-      <table>
+      <table class="table">
         <tr>
           <th>Nom</th>
           <th>Prenom</th>
