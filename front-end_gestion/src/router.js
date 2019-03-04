@@ -13,6 +13,9 @@ import UpdateProject from './views/UpdateProject.vue'
 import DeleteEmployee from './views/DeleteEmployee.vue'
 import DeleteCustomer from './views/DeleteCustomer.vue'
 import DeleteProject from './views/DeleteProject.vue'
+import ListEmployees from './views/ListEmployees.vue'
+import ListCustomers from './views/ListCustomers.vue'
+import ListProjects from './views/ListProjects.vue'
 
 Vue.use(Router)
 
@@ -92,6 +95,21 @@ export default new Router({
       path: '/DeleteProject/:id',
       name: 'DeleteProject',
       component: DeleteProject
+    },
+    {
+      path: '/ListProjects',
+      name: 'ListProjects',
+      component: ListProjects
+    },
+    {
+      path: '/ListCustomers',
+      name: 'ListCustomers',
+      component: ListCustomers
+    },
+    {
+      path: '/ListEmployees',
+      name: 'ListEmployees',
+      component: ListEmployees
     }
   ]
 })

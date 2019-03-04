@@ -1,50 +1,44 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <div class="projects-list">
+    <div>
       <table>
         <tr>
-          <th>Nom</th>
-          <th>Détails</th>
+          <th>Nombre de Projets</th>
         </tr>
-        <tr v-for="project in projects">
-          <td>{{project.name}}</td>
-          <td><router-link :to="{ name: 'ViewProject', params: { id: project._id}}">Voir les détails du projet</router-link></td>
+        <tr>
+          <td>{{projects.lenght}}</td>
         </tr>
       </table>
     </div>
     <div>
-      <a href="/AddProjects">Ajouter un projet</a>
+      <a href="/ListProjects">Liste des projets</a>
     </div>
-    <div class="employees-list">
+    <div>
       <table>
         <tr>
-          <th>Nom</th>
-          <th>Détails</th>
+          <th>Nombre de Clients</th>
         </tr>
-        <tr v-for="employee in employees">
-          <td>{{employee.name}}</td>
-          <td><router-link :to="{ name: 'ViewEmployee', params: { id: employee._id}}">Voir les détails du salarié</router-link></td>
+        <tr>
+          <td>{{customers.lenght}}</td>
         </tr>
       </table>
     </div>
     <div>
-      <a href="/AddEmployees">Ajouter un salarié</a>
+      <a href="/ListCustomers">Liste des clients</a>
     </div>
-    <div class="customers-list">
+    <div>
       <table>
         <tr>
-          <th>Nom de l'entreprise</th>
-          <th>Détails</th>
+          <th>Nombre de salariés</th>
         </tr>
-        <tr v-for="customer in customers">
-          <td>{{customer.company}}</td>
-          <td><router-link :to="{ name: 'ViewCustomer', params: { id: customer._id}}">Voir les détails du client</router-link></td>
+        <tr>
+          <td>{{employees.lenght}}</td>
         </tr>
       </table>
     </div>
     <div>
-      <a href="/AddCustomers">Ajouter un client</a>
+      <a href="/ListEmployees">Liste des salariés</a>
     </div>
   </div>
 </template>
